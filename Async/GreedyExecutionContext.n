@@ -1,0 +1,15 @@
+﻿using Nemerle.DesignPatterns;
+using Nemerle.ComputationExpressions.Async;
+
+[Singleton(Public)]
+public class GreedyExecutionContext : ExecutionContext
+{
+   private this()
+   {
+   }
+   
+   public override Execute(computation : void -> void) : void
+   {
+      System.Threading.Thread(computation).Start();
+   }
+}

@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Concurrent;
+using Nemerle.Collections;
+using Nemerle.ComputationExpressions;
+using Nemerle.ComputationExpressions.Async;
+
+using System.Threading.Thread;
+
+def data = {
+   def r = Random();
+   $[1..10].Map(_ => r.Next(10, 30));
+}
+Console.WriteLine($"Sort $data");
+      
+def queue = ConcurrentQueue();
+def sleepWeight = 50;
+def enqueue(value)
+{
+   Sleep(value * sleepWeight);
+   queue.Enqueue(value);
+   FakeVoid.Value;
+}
+data.AsyncMap(enqueue, GreedyExecutionContext.Instance).WaitAll();
+queue.Iter(Console.WriteLine);

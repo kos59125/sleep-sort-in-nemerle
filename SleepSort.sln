@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{EDCC3B85-0BAD-11DB-BC1A-00112FDE8B61}") = "Concurrency", "Concurrency\Concurrency.nproj", "{E97D7774-B922-4012-AFA2-117904059C45}"
+EndProject
+Project("{EDCC3B85-0BAD-11DB-BC1A-00112FDE8B61}") = "Async", "Async\Async.nproj", "{4E38D49D-9206-466F-B3CD-7CC16821F2CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E97D7774-B922-4012-AFA2-117904059C45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E97D7774-B922-4012-AFA2-117904059C45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E97D7774-B922-4012-AFA2-117904059C45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E97D7774-B922-4012-AFA2-117904059C45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E38D49D-9206-466F-B3CD-7CC16821F2CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E38D49D-9206-466F-B3CD-7CC16821F2CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E38D49D-9206-466F-B3CD-7CC16821F2CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E38D49D-9206-466F-B3CD-7CC16821F2CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

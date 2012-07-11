@@ -1,0 +1,19 @@
+﻿using System;
+using Nemerle.Collections;
+using Nemerle.Concurrency;
+
+def data = {
+   def r = Random();
+   $[1..10].Map(_ => r.Next(10, 30));
+};
+Console.WriteLine($"Sort $data");
+
+def s = SleepSort(50);
+repeat (data.Length)
+{
+   async
+   {
+      s.Get() |> Console.WriteLine;
+   }
+}
+data.Iter(s.Put);

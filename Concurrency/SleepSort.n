@@ -1,0 +1,28 @@
+﻿using Nemerle.Assertions;
+using Nemerle.Concurrency;
+
+using System.Threading.Thread;
+
+public class SleepSort
+{
+   private weight : int;
+   
+   public this(weight : int)
+      requires weight > 0
+   {
+      this.weight = weight;
+   }
+   
+   [ChordMember]
+   public Put(value : int) : void
+      requires value >= 0;
+
+   public Get() : int
+   chord
+   {
+      | Put => {
+         Sleep(value * this.weight);
+         value;
+      }
+   }
+}
